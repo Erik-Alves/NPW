@@ -15,6 +15,20 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+CREATE TABLE tarefas (
+  id int(11) NOT NULL,
+  tarefas text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO tarefas (id, tarefas) VALUES
+(1, '{\"Primeira tarefa\":0,\"Segunda tarefa\":1,\"Terceira\":1,\"Quarta\":0,\"Ãšltimo teste\":1}');
+
+ALTER TABLE tarefas
+ADD PRIMARY KEY (id);
+  
+ALTER TABLE tarefas
+MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- Dumping events for database 'listadetarefas'
 --
